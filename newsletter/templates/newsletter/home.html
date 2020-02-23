@@ -5,7 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>It works!!</h1>
+    <h1>{{ title }}</h1>
+        {{ user }}
+        {{ request.user }}
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Sign Up">
+<!--        <input type="text">-->
+    </form>
 
 </body>
 </html>
